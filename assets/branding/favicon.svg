@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0F172A"/>
+  <!-- The authentic AAYAM Chevron 'A' -->
+  <path d="M14 44L32 15L50 44" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Authentic brand underline -->
+  <line x1="16" y1="52" x2="48" y2="52" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

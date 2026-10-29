@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AAYAM Innovation — Official website. Discover smart Android applications and free, privacy-focused online productivity tools.">
+  <meta name="keywords" content="AAYAM Innovation, Android Apps, Free Online Tools, Image Converter, PDF Tools, Text Case Converter">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/svg+xml" href="assets/branding/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/branding/favicon.png">
+  <meta property="og:image" content="assets/branding/aayam-logo-original.png">
+  <title>AAYAM Innovation — Smart Apps. Simple Tools. Better Everyday Work.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="AAYAM Innovation Home">
+        <img src="assets/branding/aayam-wordmark-dark.png" alt="AAYAM Innovation" class="brand-wordmark-img" width="180" height="37">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#online-tools" class="nav-link">Online Tools</a></li>
+          <li><a href="#android-apps" class="nav-link">Android Apps</a></li>
+          <li><a href="#why-choose" class="nav-link">Why Us</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#online-tools" class="btn btn-primary-sm btn-glow">Try Free Tools</a>
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+          <li><a href="#online-tools" class="mobile-nav-link">Online Tools</a></li>
+          <li><a href="#android-apps" class="mobile-nav-link">Android Apps</a></li>
+          <li><a href="#why-choose" class="mobile-nav-link">Why Choose Us</a></li>
+          <li><a href="#about" class="mobile-nav-link">About AAYAM</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact & Support</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+          <a href="#online-tools" class="btn btn-primary btn-block">Explore Free Tools</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+      <div class="hero-bg-glow glow-3"></div>
+      <!-- Translucent Tilted Document Sheets (Office Background Motif) -->
+      <div class="doc-paper-decorations" aria-hidden="true">
+        <div class="doc-paper doc-paper-word doc-paper-folded paper-hero-left"></div>
+        <div class="doc-paper doc-paper-sheet paper-hero-left-back"></div>
+        <div class="doc-paper doc-paper-sheet paper-hero-right"></div>
+        <div class="doc-paper doc-paper-pdf doc-paper-folded paper-hero-right-back"></div>
+        <div class="doc-paper doc-paper-pdf doc-paper-folded paper-hero-bottom"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill hero-badge">
+            <span class="badge-dot"></span>
+            <span>Office Productivity Platform • Client-Side Security</span>
+          </div>
+          <h1 class="hero-title">
+            Smart Document Apps. Simple Tools.<br>
+            <span class="gradient-text">Better Everyday Work.</span>
+          </h1>
+          <p class="hero-lead">
+            AAYAM Innovation builds purposeful, high-speed Android applications and 100% private in-browser online tools designed for professional document, image, and office workflows — zero server transmission, zero subscriptions, zero friction.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#online-tools" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"></path>
+                <path d="M14 2V8H20"></path>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Explore Online Tools</span>
+            </a>
+            <a href="#android-apps" class="btn btn-secondary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              <span>Android Applications</span>
+            </a>
+          </div>
+
+          <!-- Trust / Key Metric Indicators -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number">12 Tools</div>
+              <div class="metric-label">Client-Side Utilities</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number">10 Apps</div>
+              <div class="metric-label">Android Office Suite</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number">100% Private</div>
+              <div class="metric-label">Zero Server Uploads</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number">Zero Cost</div>
+              <div class="metric-label">Universal Free Access</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prominent Quick Links / Teaser Bar -->
+    <section class="quick-access-section">
+      <div class="container">
+        <div class="quick-access-grid">
+          <a href="#online-tools" class="quick-card quick-card-tools">
+            <div class="quick-icon tool-icon-glow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"></path>
+                <path d="M14 2V8H20"></path>
+                <line x1="8" y1="13" x2="16" y2="13"></line>
+                <line x1="8" y1="17" x2="13" y2="17"></line>
+              </svg>
+            </div>
+            <div class="quick-details">
+              <h3>Free Online Productivity Tools</h3>
+              <p>Process documents, convert image formats, and format text securely in your browser.</p>
+              <span class="quick-arrow">Launch Tools &rarr;</span>
+            </div>
+          </a>
+
+          <a href="#android-apps" class="quick-card quick-card-apps">
+            <div class="quick-icon app-icon-glow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                <path d="M9 7H15M9 11H15M9 15H12"></path>
+              </svg>
+            </div>
+            <div class="quick-details">
+              <h3>Android Application Suite</h3>
+              <p>Explore 10 purpose-built mobile apps for documents, scanning, and media creation.</p>
+              <span class="quick-arrow">Browse Apps &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Free Online Productivity Tools -->
+    <section class="section-padding tools-section" id="online-tools">
+      <!-- Translucent Tilted Document Sheets -->
+      <div class="doc-paper-decorations" aria-hidden="true">
+        <div class="doc-paper doc-paper-pdf doc-paper-folded paper-tools-left"></div>
+        <div class="doc-paper doc-paper-sheet paper-tools-right"></div>
+      </div>
+      <div class="container tools-container">
+        <div class="section-header">
+          <div class="badge-pill badge-pill-cyan">Browser Utilities</div>
+          <h2 class="section-title">Free Online Productivity Tools</h2>
+          <p class="section-lead">
+            Perform common digital operations securely. All active tools run <strong>100% locally in your web browser</strong> — your files never get uploaded to any third-party server.
+          </p>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="tools-search-bar">
+          <div class="search-input-box">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="tool-search-input" placeholder="Search online tools (e.g., JPG, Text Case, PDF, Resizer)..." aria-label="Search online tools">
+            <button type="button" id="tool-search-clear" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
+          </div>
+
+          <div class="tool-tags-filter" id="tool-category-filters">
+            <button type="button" class="tool-tag-btn active" data-category="all">All Tools</button>
+            <button type="button" class="tool-tag-btn" data-category="text">Text Tools</button>
+            <button type="button" class="tool-tag-btn" data-category="image">Image Tools</button>
+            <button type="button" class="tool-tag-btn" data-category="pdf">PDF Tools</button>
+          </div>
+        </div>
+
+        <!-- Live Tools Grid -->
+        <div class="tools-grid" id="tools-grid">
+          <!-- Populated dynamically via script.js -->
+        </div>
+
+        <!-- No Results Fallback -->
+        <div class="no-results-box" id="tools-no-results" style="display: none;">
+          <div class="no-results-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3>No matching tools found</h3>
+          <p>Try searching for terms such as "image", "case", "resize", or "pdf".</p>
+          <button type="button" class="btn btn-secondary btn-sm" id="reset-tool-search">Reset Search Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Android Applications -->
+    <section class="section-padding apps-section" id="android-apps">
+      <!-- Translucent Tilted Document Sheets -->
+      <div class="doc-paper-decorations" aria-hidden="true">
+        <div class="doc-paper doc-paper-word paper-apps-left"></div>
+        <div class="doc-paper doc-paper-pdf doc-paper-folded paper-apps-right"></div>
+      </div>
+      <div class="container apps-container">
+        <!-- AAYAM Innovation — All Apps Promotional Banner -->
+        <div class="all-apps-banner-card" id="all-apps-banner">
+          <!-- Fluid Pastel Wave Vector Artwork Layer -->
+          <svg class="all-apps-wave-bg" viewBox="0 0 1200 480" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="aayam-wave-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+                <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+              </linearGradient>
+              <linearGradient id="aayam-wave-pink" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f472b6" stop-opacity="0.4"/>
+                <stop offset="60%" stop-color="#c084fc" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#818cf8" stop-opacity="0.15"/>
+              </linearGradient>
+              <linearGradient id="aayam-wave-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.45"/>
+                <stop offset="40%" stop-color="#fb923c" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.25"/>
+              </linearGradient>
+              <linearGradient id="aayam-wave-mint" x1="0%" y1="100%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#34d399" stop-opacity="0.5"/>
+                <stop offset="60%" stop-color="#2dd4bf" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.15"/>
+              </linearGradient>
+              <radialGradient id="aayam-top-glow" cx="80%" cy="20%" r="50%">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+                <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="aayam-bottom-glow" cx="65%" cy="85%" r="45%">
+                <stop offset="0%" stop-color="#f472b6" stop-opacity="0.3"/>
+                <stop offset="50%" stop-color="#fb923c" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- Background Radial Glows -->
+            <rect width="1200" height="480" fill="url(#aayam-top-glow)"/>
+            <rect width="1200" height="480" fill="url(#aayam-bottom-glow)"/>
+            <!-- Smooth Abstract Pastel Wave Shapes -->
+            <path d="M-50 420 C 150 480, 320 380, 520 410 C 720 440, 950 490, 1250 360 L 1250 500 L -50 500 Z" fill="url(#aayam-wave-mint)"/>
+            <path d="M300 480 C 480 370, 720 340, 920 380 C 1080 410, 1180 340, 1250 300 L 1250 500 L 300 500 Z" fill="url(#aayam-wave-cyan)"/>
+            <path d="M550 480 C 720 380, 900 320, 1080 340 C 1170 350, 1220 330, 1250 280 L 1250 500 L 550 500 Z" fill="url(#aayam-wave-pink)"/>
+            <path d="M680 480 C 820 430, 980 400, 1120 420 C 1180 428, 1220 410, 1250 390 L 1250 500 L 680 500 Z" fill="url(#aayam-wave-gold)"/>
+            <!-- Top Right Fluid Waves -->
+            <path d="M750 -40 C 860 60, 1020 90, 1250 40 L 1250 -50 L 750 -50 Z" fill="url(#aayam-wave-cyan)"/>
+            <path d="M920 -50 C 1020 40, 1140 70, 1250 50 L 1250 -50 Z" fill="url(#aayam-wave-pink)"/>
+          </svg>
+
+          <!-- Banner Layout Grid -->
+          <div class="all-apps-banner-inner">
+            <!-- Left Content Column -->
+            <div class="all-apps-content-col">
+              <!-- Authentic Brand Wordmark (Exact Website Asset) -->
+              <div class="all-apps-brand-wrap">
+                <img src="assets/branding/aayam-wordmark-dark.png" alt="AAYAM Innovation" class="all-apps-wordmark-img" width="205" height="42">
+                <div class="all-apps-brand-glow-bar" aria-hidden="true"></div>
+              </div>
+
+              <!-- Main Headline -->
+              <h2 class="all-apps-headline">
+                Explore Our <span class="all-apps-gradient-title">Android Apps</span>
+              </h2>
+
+              <!-- Description -->
+              <p class="all-apps-desc">
+                Discover useful apps designed to make everyday tasks easier.
+              </p>
+
+              <!-- Primary Google Play CTA Button -->
+              <div class="all-apps-cta-wrap">
+                <a href="https://play.google.com/store/apps/details?id=com.docprintpro.scan" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="all-apps-cta-btn" 
+                   aria-label="Explore on Google Play (opens in a new tab)">
+                  <span class="all-apps-cta-icon" aria-hidden="true">
+                    <!-- Authentic Google Play 4-Color Triangle SVG -->
+                    <svg viewBox="0 0 512 512" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M48.7 16.5C39.4 26.6 34 41.5 34 60.1v391.8c0 18.6 5.4 33.5 14.7 43.6l2.4 2.3 221.7-221.7v-5.2L51.1 14.2l-2.4 2.3z" fill="#00e5ff"/>
+                      <path d="M346.5 330.4l-73.7-73.7v-5.2l73.7-73.7 1.7 1 87.2 49.5c24.9 14.1 24.9 37.3 0 51.5l-87.2 49.5-1.7 1.1z" fill="#ffeb3b"/>
+                      <path d="M272.8 268.4L51.1 497.8c8.3 8.8 22 9.8 37.4 1l266.3-151.4-82-79z" fill="#ff3d00"/>
+                      <path d="M272.8 243.6l82-79L88.5 13.2c-15.4-8.8-29.1-7.8-37.4 1l221.7 229.4z" fill="#00e676"/>
+                    </svg>
+                  </span>
+                  <span class="all-apps-cta-label">Explore on Google Play</span>
+                  <svg class="all-apps-cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Visual Column (Tilted Smartphone & 3D Floating Elements) -->
+            <div class="all-apps-visual-col" aria-hidden="true">
+              <!-- Swirling Luminous Ribbon Trails -->
+              <svg class="all-apps-ribbon-svg" viewBox="0 0 500 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="ribbon-glow-gold" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+                    <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.95"/>
+                    <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.6"/>
+                  </linearGradient>
+                  <linearGradient id="ribbon-glow-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+                    <stop offset="50%" stop-color="#a855f7" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#ec4899" stop-opacity="0.85"/>
+                  </linearGradient>
+                  <filter id="ribbon-blur" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+                <!-- Energy Swirl Loops -->
+                <path d="M 60 280 C 120 180, 260 140, 360 220 C 440 280, 380 380, 240 370 C 140 360, 80 430, 20 440" stroke="url(#ribbon-glow-cyan)" stroke-width="12" stroke-linecap="round" stroke-opacity="0.65" filter="url(#ribbon-blur)" fill="none"/>
+                <path d="M 120 340 C 200 240, 320 220, 420 280 C 490 320, 440 400, 310 410 C 210 420, 140 450, 70 440" stroke="url(#ribbon-glow-gold)" stroke-width="8" stroke-linecap="round" stroke-opacity="0.75" filter="url(#ribbon-blur)" fill="none"/>
+              </svg>
+
+              <!-- Smartphone 3D Device Wrapper -->
+              <div class="all-apps-phone-device">
+                <div class="all-apps-phone-body">
+                  <div class="all-apps-phone-camera"></div>
+                  <div class="all-apps-phone-screen">
+                    <div class="all-apps-screen-glass-sheen"></div>
+                    <!-- Large Official Google Play 4-Color Triangle Logo -->
+                    <div class="all-apps-screen-logo-wrap">
+                      <svg class="all-apps-screen-play-icon" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.7 16.5C39.4 26.6 34 41.5 34 60.1v391.8c0 18.6 5.4 33.5 14.7 43.6l2.4 2.3 221.7-221.7v-5.2L51.1 14.2l-2.4 2.3z" fill="#00e5ff"/>
+                        <path d="M346.5 330.4l-73.7-73.7v-5.2l73.7-73.7 1.7 1 87.2 49.5c24.9 14.1 24.9 37.3 0 51.5l-87.2 49.5-1.7 1.1z" fill="#ffeb3b"/>
+                        <path d="M272.8 268.4L51.1 497.8c8.3 8.8 22 9.8 37.4 1l266.3-151.4-82-79z" fill="#ff3d00"/>
+                        <path d="M272.8 243.6l82-79L88.5 13.2c-15.4-8.8-29.1-7.8-37.4 1l221.7 229.4z" fill="#00e676"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating 3D App Squircles -->
+              <!-- 1. Blue/Cyan Document Tile (Top Left) -->
+              <div class="all-apps-float-icon tile-blue" style="top: 14%; left: 16%;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                  <line x1="7" y1="8" x2="17" y2="8"></line>
+                  <line x1="7" y1="12" x2="17" y2="12"></line>
+                  <line x1="7" y1="16" x2="13" y2="16"></line>
+                </svg>
+              </div>
+
+              <!-- 2. Green Grid/Table Tile (Middle Left) -->
+              <div class="all-apps-float-icon tile-green" style="top: 38%; left: 4%;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+              </div>
+
+              <!-- 3. Orange Photo Tile (Bottom Left) -->
+              <div class="all-apps-float-icon tile-orange" style="top: 62%; left: 18%;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+
+              <!-- 4. Purple Scanner Tile (Middle Right) -->
+              <div class="all-apps-float-icon tile-purple" style="top: 24%; right: 10%;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 3H5a2 2 0 0 0-2 2v2"></path>
+                  <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                  <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M3 17v2a2 2 0 0 0 2 2h2"></path>
+                </svg>
+              </div>
+
+              <!-- 5. Pink Pen/Signature Tile (Bottom Right) -->
+              <div class="all-apps-float-icon tile-pink" style="top: 52%; right: 6%;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+
+              <!-- Floating Glowing 3D Golden Stars -->
+              <div class="all-apps-sparkle star-1" style="top: 10%; left: 45%;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#fbbf24">
+                  <path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z"/>
+                </svg>
+              </div>
+              <div class="all-apps-sparkle star-2" style="top: 72%; right: 4%;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fbbf24">
+                  <path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z"/>
+                </svg>
+              </div>
+
+              <!-- Floating 3D Spheres with Specular Highlights -->
+              <div class="all-apps-sphere sphere-peach" style="top: 26%; left: 10%;"></div>
+              <div class="all-apps-sphere sphere-purple" style="top: 34%; left: 38%;"></div>
+              <div class="all-apps-sphere sphere-cyan" style="top: 76%; right: 28%;"></div>
+              <div class="all-apps-sphere sphere-blue" style="top: 80%; right: 12%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Why Choose AAYAM Innovation -->
+    <section class="section-padding why-section" id="why-choose">
+      <div class="container why-container">
+        <div class="section-header">
+          <div class="badge-pill">Built Different</div>
+          <h2 class="section-title">Why Choose AAYAM Innovation?</h2>
+          <p class="section-lead">
+            We focus on clean software architecture, respect for user privacy, and dependable utilities that solve everyday challenges.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon feature-icon-blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3>100% Client-Side Privacy</h3>
+            <p>Our online tools process text, images, and documents locally in your browser memory. Your confidential files never touch an external server.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon feature-icon-violet">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3>Fast & Lightweight</h3>
+            <p>Built with lean, modern standards without heavy dependencies or bloated runtimes, ensuring immediate load times even on modest hardware.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon feature-icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3>No Paywalls or Subscriptions</h3>
+            <p>Essential utilities must be universally accessible. Access our core web tools freely without registration, hidden credits, or subscription traps.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon feature-icon-gradient">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3>Thoughtful UI & Ergonomics</h3>
+            <p>Every interface is engineered for clarity. High-contrast typography, intuitive controls, and responsive layouts keep your workflow seamless.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: About AAYAM Innovation -->
+    <section class="section-padding about-section" id="about">
+      <!-- Translucent Tilted Document Sheets -->
+      <div class="doc-paper-decorations" aria-hidden="true">
+        <div class="doc-paper doc-paper-sheet paper-about-left"></div>
+        <div class="doc-paper doc-paper-word doc-paper-folded paper-about-right"></div>
+      </div>
+      <div class="container about-container">
+        <!-- Top Block: About Us Hero & Founder Office Photo -->
+        <div class="about-main-grid">
+          <div class="about-text-col">
+            <div class="about-badge-pill">ABOUT US</div>
+            <h2 class="about-main-title">AAYAM <span class="about-brand-highlight">Innovation</span></h2>
+            <p class="about-subtitle">Practical Technology for Everyday Needs</p>
+            <p class="about-desc-text">
+              We build simple, useful Android apps and online tools that make everyday work easier for everyone.
+            </p>
+
+            <!-- Four Compact Value Cards -->
+            <div class="about-value-cards">
+              <div class="about-val-card">
+                <div class="about-val-icon icon-mint" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="about-val-info">
+                  <h4 class="about-val-title">User First Design</h4>
+                  <p class="about-val-desc">Made for real people</p>
+                </div>
+              </div>
+
+              <div class="about-val-card">
+                <div class="about-val-icon icon-yellow" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="about-val-info">
+                  <h4 class="about-val-title">Simple & Powerful</h4>
+                  <p class="about-val-desc">Easy to use tools</p>
+                </div>
+              </div>
+
+              <div class="about-val-card">
+                <div class="about-val-icon icon-cyan" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <div class="about-val-info">
+                  <h4 class="about-val-title">Secure & Reliable</h4>
+                  <p class="about-val-desc">Your data stays safe</p>
+                </div>
+              </div>
+
+              <div class="about-val-card">
+                <div class="about-val-icon icon-pink" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </div>
+                <div class="about-val-info">
+                  <h4 class="about-val-title">Built for Everyone</h4>
+                  <p class="about-val-desc">Useful for all needs</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="about-actions-row">
+              <a href="https://play.google.com/store/apps/details?id=com.docprintpro.scan" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="about-btn-play" 
+                 aria-label="Explore Our Apps on Google Play (opens in a new tab)">
+                <span class="about-btn-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 512 512" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.7 16.5C39.4 26.6 34 41.5 34 60.1v391.8c0 18.6 5.4 33.5 14.7 43.6l2.4 2.3 221.7-221.7v-5.2L51.1 14.2l-2.4 2.3z" fill="#00e5ff"/>
+                    <path d="M346.5 330.4l-73.7-73.7v-5.2l73.7-73.7 1.7 1 87.2 49.5c24.9 14.1 24.9 37.3 0 51.5l-87.2 49.5-1.7 1.1z" fill="#ffeb3b"/>
+                    <path d="M272.8 268.4L51.1 497.8c8.3 8.8 22 9.8 37.4 1l266.3-151.4-82-79z" fill="#ff3d00"/>
+                    <path d="M272.8 243.6l82-79L88.5 13.2c-15.4-8.8-29.1-7.8-37.4 1l221.7 229.4z" fill="#00e676"/>
+                  </svg>
+                </span>
+                <span>Explore Our Apps on Google Play</span>
+                <span class="about-btn-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a href="#our-story" class="about-btn-journey">
+                <span>Our Journey</span>
+                <span class="about-btn-arrow-down" aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: AAYAM Innovation Banner Image (40-45% width on desktop) -->
+          <div class="about-image-col">
+            <div class="about-founder-frame">
+              <img src="assets/branding/aayam-founder-office.png" 
+                   alt="AAYAM Innovation Banner" 
+                   class="about-founder-img" 
+                   loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Block: Our Story -->
+        <div class="our-story-section" id="our-story">
+          <div class="our-story-card-wrapper">
+            <div class="our-story-grid">
+              <div class="our-story-text-col">
+                <div class="about-badge-pill">OUR STORY</div>
+                <h3 class="our-story-heading">From a Simple Idea to AAYAM Innovation</h3>
+                <p class="our-story-desc">
+                  AAYAM Innovation started with a simple idea — to solve real daily problems with technology. We create practical digital tools for students, professionals, businesses, and everyone in between.
+                </p>
+              </div>
+
+              <div class="our-story-cards-col">
+                <!-- Our Mission -->
+                <div class="story-pillar-card card-mission">
+                  <div class="story-pillar-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="9" y1="18" x2="15" y2="18"></line>
+                      <line x1="10" y1="22" x2="14" y2="22"></line>
+                      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                    </svg>
+                  </div>
+                  <h4 class="story-pillar-title">Our Mission</h4>
+                  <p class="story-pillar-text">Create easy and useful digital tools for everyone.</p>
+                </div>
+
+                <!-- Our Vision -->
+                <div class="story-pillar-card card-vision">
+                  <div class="story-pillar-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <h4 class="story-pillar-title">Our Vision</h4>
+                  <p class="story-pillar-text">Become a trusted name in Android apps and online tools.</p>
+                </div>
+
+                <!-- Our Values -->
+                <div class="story-pillar-card card-values">
+                  <div class="story-pillar-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <h4 class="story-pillar-title">Our Values</h4>
+                  <p class="story-pillar-text">Simplicity, quality, and user focus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contact & Support -->
+    <section class="section-padding contact-section" id="contact">
+      <!-- Translucent Tilted Document Sheets -->
+      <div class="doc-paper-decorations" aria-hidden="true">
+        <div class="doc-paper doc-paper-word paper-contact-left"></div>
+      </div>
+      <div class="container contact-container">
+        <div class="section-header">
+          <div class="badge-pill">Get In Touch</div>
+          <h2 class="section-title">Contact & Support</h2>
+          <p class="section-lead">
+            Have a question regarding our Android apps or web tools? Want to propose a new utility or report an issue? We'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information & FAQs -->
+          <div class="contact-info-col">
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="info-content">
+                <h4>Direct Email Inquiries</h4>
+                <p>For official inquiries, app feedback, or partnership discussions:</p>
+                <a href="mailto:aayaminnovations@gmail.com" class="contact-link">aayaminnovations@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div class="info-content">
+                <h4>Open Source & Code</h4>
+                <p>Track releases and official repositories on GitHub:</p>
+                <a href="https://github.com/aayamininnovations-oss/aayam-innovation" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  github.com/aayamininnovations-oss
+                </a>
+              </div>
+            </div>
+
+            <!-- Mini FAQ Accordion -->
+            <div class="faq-container">
+              <h4 class="faq-heading">Frequently Asked Questions</h4>
+              <details class="faq-item">
+                <summary>Are my documents uploaded when using the online tools?</summary>
+                <p>No. All online tools on this website process your files 100% locally in your web browser using client-side JavaScript, WebAssembly, and HTML5 Canvas APIs. Your documents, photos, and signatures are never uploaded to any remote server or external service, ensuring complete privacy.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Where can I find AAYAM apps on Google Play?</summary>
+                <p>Our Android apps are listed on Google Play as they become available. Visit the Android Apps section to explore available apps and open their official Google Play listings.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Can I suggest a new online productivity tool?</summary>
+                <p>Absolutely! Use our Contact form to share your idea. We welcome suggestions for tools that make everyday work easier.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col">
+            <div class="form-card">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-subtitle">Fill in your details below and our team will get back to you.</p>
+
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <!-- Web3Forms Access Key & Configuration -->
+                <input type="hidden" name="access_key" value="8e9ead8b-e97f-4fa7-9b77-dd82719ae554">
+                <input type="hidden" name="from_name" value="AAYAM Innovation Contact Form">
+                <input type="hidden" name="subject" value="New Contact Us Message - AAYAM Innovation">
+
+                <div class="form-group">
+                  <label for="contact-name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Rahul Sharma" autocomplete="name" required>
+                  <span class="field-error" id="name-error">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. rahul@example.com" autocomplete="email" required>
+                  <span class="field-error" id="email-error">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-topic">Inquiry Topic</label>
+                  <select id="contact-topic" name="topic" class="form-control">
+                    <option value="Android App Inquiry">Android App Inquiry</option>
+                    <option value="Online Tools Feedback / Request">Online Tools Feedback / Request</option>
+                    <option value="Business & Collaboration">Business & Collaboration</option>
+                    <option value="General Support">General Support</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message <span class="required">*</span></label>
+                  <textarea id="contact-message" name="message" rows="4" class="form-control" placeholder="Tell us how we can help..." required></textarea>
+                  <span class="field-error" id="message-error">Please write a brief message (at least 5 characters).</span>
+                </div>
+
+                <!-- Anti-spam Honeypot Field (hidden from genuine users, recognized by Web3Forms as botcheck) -->
+                <div class="form-hp-field" style="display:none !important;" aria-hidden="true">
+                  <label for="contact-hp">Leave this field blank</label>
+                  <input type="checkbox" name="botcheck" id="contact-hp" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-submit" id="contact-submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+
+              <!-- Success Alert Box (Initially Hidden) -->
+              <div class="form-success-alert" id="form-success-alert" style="display: none;" role="alert">
+                <div class="success-icon">✓</div>
+                <div>
+                  <strong>Message Sent Successfully!</strong>
+                  <p id="form-success-text">Thank you for reaching out to AAYAM Innovation. We will review your message promptly.</p>
+                </div>
+              </div>
+
+              <!-- Error Alert Box (Initially Hidden) -->
+              <div class="form-error-alert" id="form-error-alert" style="display: none;" role="alert">
+                <div class="error-icon">✕</div>
+                <div>
+                  <strong id="form-error-title">Unable to Send Message</strong>
+                  <p id="form-error-text">We couldn't deliver your message right now. Please check your connection or contact us directly at <a href="mailto:aayaminnovations@gmail.com">aayaminnovations@gmail.com</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Tool Modal / Workbench -->
+  <div class="tool-modal" id="tool-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-tool-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-tool-icon" id="modal-tool-icon"></div>
+          <div>
+            <h3 class="modal-title" id="modal-tool-title">Tool Workbench</h3>
+            <span class="modal-status-badge" id="modal-status-badge">Live Tool</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close tool workbench">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamic Workbench Content Injected by script.js based on selected tool -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="tool-modal" id="privacy-modal" aria-hidden="true" role="dialog" aria-labelledby="privacy-modal-title">
+    <div class="modal-backdrop" id="privacy-modal-backdrop"></div>
+    <div class="modal-dialog modal-dialog-readable">
+      <div class="modal-header">
+        <h3 class="modal-title" id="privacy-modal-title">Privacy Policy & Guarantees</h3>
+        <button type="button" class="modal-close-btn" id="privacy-modal-close" aria-label="Close Privacy Modal">&times;</button>
+      </div>
+      <div class="modal-body typography-content">
+        <h4>1. Zero Document Storage</h4>
+        <p>AAYAM Innovation provides free online tools designed to process data locally within your web browser. When you use our Image Converters, Image Resizer, or Text Case Converter, your data is processed entirely in client-side memory using HTML5 APIs. No files, text, or images are transmitted to our servers or stored externally.</p>
+
+        <h4>2. Android Applications</h4>
+        <p>Our Android applications are built in compliance with Google Play Developer Policies. Permissions requested by each application (such as camera access for <em>AAYAM Scanner</em> or storage access for <em>AAYAM Office Pro</em>) are utilized solely to provide the specified functional capability on your device.</p>
+
+        <h4>3. Analytics & Cookies</h4>
+        <p>This static website does not track personal browsing habits or install invasive third-party advertising cookies. We believe in high utility without sacrificing user privacy.</p>
+
+        <h4>4. Contact Inquiries</h4>
+        <p>Information submitted through our contact form is used strictly to respond to user requests, bug reports, and partnership inquiries.</p>
+        
+        <p class="policy-date"><em>Last Updated: October 2026 • AAYAM Innovation</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo footer-logo" aria-label="AAYAM Innovation Home">
+            <img src="assets/branding/aayam-wordmark-white.png" alt="AAYAM Innovation" class="brand-wordmark-img footer-wordmark-img" width="170" height="35">
+          </a>
+          <p class="footer-tagline">
+            Smart Apps. Simple Tools. Better Everyday Work. Empowering individuals and organizations with clean, ethical technology.
+          </p>
+          <div class="deployment-badge">
+            <span class="cf-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
+            <span>Cloudflare Pages Optimized Static Build</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#online-tools">Free Online Tools</a></li>
+            <li><a href="#android-apps">Android Apps</a></li>
+            <li><a href="#why-choose">Why Choose Us</a></li>
+            <li><a href="#about">About AAYAM</a></li>
+            <li><a href="#contact">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Top Utilities</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#online-tools" data-quick-tool="text-case">Text Case Converter</a></li>
+            <li><a href="#online-tools" data-quick-tool="jpg-to-png">JPG to PNG Converter</a></li>
+            <li><a href="#online-tools" data-quick-tool="png-to-jpg">PNG to JPG Converter</a></li>
+            <li><a href="#online-tools" data-quick-tool="image-resizer">Image Resizer</a></li>
+            <li><a href="#online-tools" data-quick-tool="image-compressor">Image Compressor</a></li>
+            <li><a href="#online-tools" data-quick-tool="image-to-pdf">Image to PDF</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Legal & Trust</h4>
+          <ul class="footer-nav-list">
+            <li><a href="javascript:void(0)" id="privacy-policy-link">Privacy Policy</a></li>
+            <li><a href="#contact">Support Guidelines</a></li>
+            <li><a href="https://github.com/aayamininnovations-oss/aayam-innovation" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> AAYAM Innovation. All rights reserved.
+        </p>
+        <p class="footer-subtext">
+          Designed with modern web standards. Built for speed, privacy, and universal accessibility.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-Side Document & PDF Processing Libraries (100% In-Browser Execution) -->
+  <script src="assets/libs/pdf-lib.min.js"></script>
+  <script src="assets/libs/pdf-encrypt.umd.js"></script>
+  <script src="assets/libs/pdf-decrypt.umd.js"></script>
+  <script src="assets/libs/pdf.min.js"></script>
+  <script src="assets/libs/mammoth.browser.min.js"></script>
+  <script src="assets/libs/xlsx.full.min.js"></script>
+  <script src="assets/ocr/tesseract.min.js"></script>
+  <script src="assets/libs/forge.min.js"></script>
+
+  <!-- Main JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+</html>
