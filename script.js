@@ -3250,6 +3250,14 @@
           badgeColor: '#10b981'
         })}
 
+        <!-- Excel Import Loading Overlay -->
+        <div class="excel-loading-overlay" id="excel-loading-overlay" style="display: none;" role="status" aria-live="polite">
+          <div class="excel-loading-card">
+            <div class="excel-spinner" aria-hidden="true"></div>
+            <div class="excel-loading-text" id="excel-loading-text">Processing Excel file... Please wait.</div>
+          </div>
+        </div>
+
         <div id="excel-work-area" style="display: none;" class="excel-studio-container">
           <!-- Top Header Bar -->
           <div class="excel-workbench-header">
@@ -3498,6 +3506,11 @@
     // DOM Element References
     const importBox = document.getElementById('excel-import-box');
     const workArea = document.getElementById('excel-work-area');
+    const excelLoadingOverlay = document.getElementById('excel-loading-overlay');
+    const excelLoadingText = document.getElementById('excel-loading-text');
+    const excelDropzone = document.getElementById('excel-dropzone');
+    const excelFileInput = document.getElementById('excel-file-input');
+    const excelBrowseBtn = document.getElementById('excel-browse-btn');
     const fileNameEl = document.getElementById('excel-filename-text');
     const fileStatsEl = document.getElementById('excel-file-stats');
     const changeFileBtn = document.getElementById('btn-change-excel-file');
@@ -3561,6 +3574,36 @@
     let dragType = 'cell'; // 'cell' | 'row' | 'col'
     let isGeneratingPdf = false;
     let isPreviewDirty = true;
+    let isImportingSpreadsheet = false;
+
+    function showExcelLoading(msg = 'Processing Excel file... Please wait.') {
+      if (excelLoadingText) excelLoadingText.textContent = msg;
+      if (excelLoadingOverlay) {
+        excelLoadingOverlay.style.display = 'flex';
+      }
+      if (excelFileInput) excelFileInput.disabled = true;
+      if (excelBrowseBtn) excelBrowseBtn.disabled = true;
+      if (excelDropzone) {
+        excelDropzone.classList.add('importing-disabled');
+        excelDropzone.setAttribute('aria-disabled', 'true');
+      }
+      const workbenchRoot = dom.modalBody.querySelector('.excel-workbench-root');
+      if (workbenchRoot) workbenchRoot.classList.add('is-importing');
+    }
+
+    function hideExcelLoading() {
+      if (excelLoadingOverlay) {
+        excelLoadingOverlay.style.display = 'none';
+      }
+      if (excelFileInput) excelFileInput.disabled = false;
+      if (excelBrowseBtn) excelBrowseBtn.disabled = false;
+      if (excelDropzone) {
+        excelDropzone.classList.remove('importing-disabled');
+        excelDropzone.removeAttribute('aria-disabled');
+      }
+      const workbenchRoot = dom.modalBody.querySelector('.excel-workbench-root');
+      if (workbenchRoot) workbenchRoot.classList.remove('is-importing');
+    }
 
     let printSettings = {
       paper: 'A4',
@@ -3654,6 +3697,8 @@
 
     // Reset Workbench State
     function resetExcelState() {
+      hideExcelLoading();
+      isImportingSpreadsheet = false;
       workbook = null;
       baseFileName = 'spreadsheet';
       originalFileName = 'spreadsheet.xlsx';
@@ -4036,6 +4081,8 @@
       // Clean up window listeners when modal closes or changes
       currentWorkbenchCleanup = () => {
         window.removeEventListener('mouseup', onDocMouseUp);
+        hideExcelLoading();
+        isImportingSpreadsheet = false;
         if (previewPdfDoc) {
           try { previewPdfDoc.destroy(); } catch (e) {}
           previewPdfDoc = null;
@@ -4752,7 +4799,7 @@
 
     // Load & Parse Spreadsheet File
     async function loadSpreadsheet(file) {
-      if (!file) return;
+      if (!file || isImportingSpreadsheet) return;
       const lower = file.name.toLowerCase();
       if (!lower.endsWith('.xlsx') && !lower.endsWith('.xls') && !lower.endsWith('.csv')) {
         showToast('Please select a valid spreadsheet (.xlsx, .xls, .csv).', 'error');
@@ -4770,28 +4817,42 @@
         return;
       }
 
+      isImportingSpreadsheet = true;
+      showExcelLoading('Processing Excel file... Please wait.');
+
+      // Allow browser to render loading spinner before CPU-heavy read & parse operations
+      await new Promise(resolve => setTimeout(resolve, 60));
+
       originalFileName = file.name;
       baseFileName = file.name.replace(/\.[^/.]+$/, '');
 
       try {
+        // Step 1: File reading
         const buf = await file.arrayBuffer();
         const bytes = new Uint8Array(buf);
         if (lower.endsWith('.xlsx')) {
           if (bytes.length < 4 || bytes[0] !== 0x50 || bytes[1] !== 0x4B) {
+            hideExcelLoading();
             showToast('Failed to parse spreadsheet file: Invalid or corrupt Excel format.', 'error');
             resetExcelState();
             return;
           }
         }
+
+        // Brief yield to keep UI responsive
+        await new Promise(resolve => setTimeout(resolve, 20));
+
+        // Step 2: XLSX workbook parsing
         workbook = window.XLSX.read(buf, { type: 'array', cellDates: true, cellStyles: true });
 
         if (!workbook.SheetNames || !workbook.SheetNames.length) {
+          hideExcelLoading();
           showToast('Workbook contains no worksheets.', 'error');
           resetExcelState();
           return;
         }
 
-        // Initialize sheet used ranges and selections
+        // Step 3: Worksheet detection
         workbook.SheetNames.forEach(sheetName => {
           const ws = workbook.Sheets[sheetName];
           const used = detectUsedRange(ws);
@@ -4829,13 +4890,26 @@
         workArea.style.display = 'flex';
 
         renderSheetTabs();
+
+        // Step 4: Initial spreadsheet preview rendering
         renderSpreadsheetGrid(activeSheetName);
+
+        // Allow browser to paint the rendered spreadsheet preview before dismissing loader
+        await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 50)));
+
+        // Hide loading indicator after spreadsheet preview is successfully displayed
+        hideExcelLoading();
 
         showToast(`Loaded "${file.name}" with ${totalSheets} worksheet${totalSheets > 1 ? 's' : ''}`, 'info');
       } catch (err) {
         console.error('Excel load error:', err);
+        hideExcelLoading();
         showToast('Failed to parse spreadsheet file: ' + (err.message || 'Corrupt or unsupported format'), 'error');
         resetExcelState();
+      } finally {
+        isImportingSpreadsheet = false;
+        const fileInput = document.getElementById('excel-file-input');
+        if (fileInput) fileInput.value = '';
       }
     }
 
@@ -4845,6 +4919,7 @@
       fileInputId: 'excel-file-input',
       browseBtnId: 'excel-browse-btn',
       onFilesSelected: (files) => {
+        if (isImportingSpreadsheet) return;
         if (files && files[0]) loadSpreadsheet(files[0]);
       }
     });
